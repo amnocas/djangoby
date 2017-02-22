@@ -12,6 +12,9 @@
     </head>
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h1><a href="/">Seaplusplus blog</a></h1>
             <h2>Sharing seaplusplus implementation hints and tricks</h2>
             <!--<p>Hi! This is the place for <strong>sharing</strong> any issues related with using <em>sea++</em> for simulation of aquaculture farms.</p>-->
