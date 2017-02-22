@@ -12,5 +12,14 @@
             <p>Hi! This is the place for <strong>sharing</strong> any issues related with using <em>sea++</em> for simulation of aquaculture farms.</p>
             <p>It works!</p>
         </div>
+        <div>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
